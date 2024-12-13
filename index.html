@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cosmos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#imagen-dia">Imagen del Día</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Seccion de bienvenida -->
+        <section id="bienvenida" class="bienvenida">
+            <div class="mensaje-bienvenida">
+                <h2 class="mensaje-bienvenida">Explora el Universo con Cosmos</h2>
+            </div>
+        </section>
+
+        <!-- Seccion introductoria-->
+        <section id="intro">
+            <p>Bienvenido a Cosmos, tu ventana al fascinante universo. 
+            Explora imágenes impresionantes del espacio profundo, estrellas, planetas y más, 
+            capturadas por la NASA. Además, cada día podrás descubrir la 'Imagen Astronómica del Día', 
+            una espectacular foto acompañada de su historia y explicación. ¡Sumérgete en el cosmos y 
+            deja que cada imagen te cuente una nueva historia del universo!</p>
+         </section>
+        
+        <!-- Seccion de la imagen del dia -->
+        <section id="imagen-dia">
+            <div id="flexContainer">
+                <!-- Aca se cargara la imagen del día desde la API -->
+            </div>
+        </section>
+
+        <section id="intro">
+          <h3>Descubre los Planetas de Nuestro Sistema Solar</h3>
+          <p>Desde el pequeño y abrasador Mercurio hasta el gigante y ventoso Neptuno, 
+            explora cada rincón de nuestro sistema solar. Haz clic en las imágenes para 
+            conocer más sobre la composición, las características únicas y 
+            los secretos de estos mundos fascinantes que orbitan alrededor de nuestra estrella, el Sol.</p>
+       </section>
+
+
+       <section class="planetas">
+        <h2>Planetas del Sistema Solar</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="assets/img/mercurio.jpg" alt="Imagen de Mercurio">
+                <button onclick="openModal('Mercurio', 'Mercurio es el planeta más cercano al Sol y el más pequeño del sistema solar. Carece de atmósfera significativa, lo que genera temperaturas extremas entre el día y la noche.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/venus.webp" alt="Imagen de Venus">
+                <button onclick="openModal('Venus', 'Venus tiene una densa atmósfera de dióxido de carbono que atrapa el calor, convirtiéndolo en el planeta más caliente del sistema solar. También es conocido por sus espesas nubes de ácido sulfúrico.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/Tierra.jpg" alt="Imagen de la Tierra">
+                <button onclick="openModal('Tierra', 'La Tierra es el único planeta conocido que alberga vida. Su atmósfera rica en oxígeno y su abundante agua líquida la convierten en un lugar único en el universo conocido.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/marte.png" alt="Imagen de Marte">
+                <button onclick="openModal('Marte', 'Marte, conocido como el planeta rojo, tiene una atmósfera delgada y está cubierto de polvo rico en óxido de hierro. También alberga el volcán más grande del sistema solar, el Monte Olimpo.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/jupiter.jpg" alt="Imagen de Júpiter">
+                <button onclick="openModal('Júpiter', 'Júpiter es el gigante gaseoso más grande del sistema solar. Es famoso por su Gran Mancha Roja, una tormenta que ha durado siglos, y sus numerosos satélites, incluido Ganímedes, el mayor del sistema solar.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/saturno.jpg" alt="Imagen de Saturno">
+                <button onclick="openModal('Saturno', 'Saturno es el segundo planeta más grande y es conocido por sus impresionantes anillos compuestos principalmente de partículas de hielo. Es también el hogar de lunas fascinantes como Titán y Encélado.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/urano.png" alt="Imagen de Urano">
+                <button onclick="openModal('Urano', 'Urano es un gigante gaseoso con una atmósfera rica en metano, lo que le da su color azul verdoso. Su eje de rotación está inclinado casi 90 grados, lo que lo hace único.')">Más información</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/neptune.jpg" alt="Imagen de Neptuno">
+                <button onclick="openModal('Neptuno', 'Neptuno, el planeta más alejado del Sol, es un gigante helado conocido por sus intensos vientos y su característico color azul profundo, causado por el metano en su atmósfera.')">Más información</button>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <img id="modal-image" src="" alt="Imagen del planeta" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px;">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <button onclick="closeModal()">Cerrar</button>
+            </div>
+        </div>
+    </section>
+          
+
+          <section id="galeria" id="contacto-bg">
+            <h2>Galería</h2>
+            <!-- Formulario de busqueda -->
+            <div class="formulario-busqueda">
+                <input type="text" id="input-busqueda" placeholder="Buscar imágenes...">
+                <button id="boton-buscar">Buscar</button>
+            </div>
+        
+            <!-- Contenedor de la galeria -->
+            <div class="contenedor-galeria">
+                <div id="carrusel" class="carrusel">
+                    <!-- Las imagenes se cargarán aqui -->
+                </div>
+            </div>
+        </section>
+        
+        
+       <section id="contacto-contenedor" class="contacto-bg">
+    <div id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje-enviado"></p>
+    </div>
+</section>
+
+    </main>
+    
+    <footer>
+        <div style="margin-bottom: 10px;">
+            <p>&copy; 2024 COSMOS. All Rights Reserved.</p>
+            <p>Explorando el universo con datos de la NASA.</p>
+    </footer>
+    
+
+    <script src="js/asteroides.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/ImagenDelDia.js"></script>
+    <script src="js/modalPlanetas.js"></script>
+</body>
+</html>

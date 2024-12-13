@@ -1,0 +1,404 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+}
+
+.logo {
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000052;
+    padding: 15px 20px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(2, 0, 0, 0);
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff2d;
+}
+
+/* Seccion de bienvenida */
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 111%;
+    background: url('../img/jayanth-muppaneni-RFyyV0Mh0vg-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.bienvenida::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000000 100%);
+    z-index: 5;
+}
+
+.mensaje-bienvenida {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.mensaje-bienvenida h2 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 0 0 10px #ffffff96, 0 0 20px #fff7d796, 0 0 30px #6b6b6bb0;
+}
+
+
+#intro p {
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    text-align: center;
+    color: #ffffff; 
+    margin: 20px; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+    margin-top: 0px;
+    flex-grow: 1;
+}
+
+section {
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+
+h2 {
+    color: #ffffff;
+}
+
+
+/* Contenedor de la imagen destacada */
+#imagen-dia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+}
+
+.imagen-reducida {
+    max-width: 30vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    box-sizing: border-box;box-shadow: 0 4px 6px rgba(255, 255, 255, 0.329);
+}
+
+#contenedor-descripcion {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    max-height: 20vw;
+}
+
+#titulo-imagen {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#descripcion-imagen {
+    font-size: 1.2em;
+    color: white;
+    margin: 0;
+    text-align: justify;
+}
+
+/*planetas*/
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards-container {
+    position: relative;
+    background-image: url('../img/zoltan-tasi-dOlBjtJfFkk-unsplash.jpg'); 
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    padding: 50px 20px;
+    color: rgb(0, 0, 0);
+}
+.card {
+    background-color: rgba(27, 27, 27, 0.34);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+.card button {
+    background-color: #0000009f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.card button:hover {
+    background-color: #ffffff42;
+}
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 87, 87, 0.226);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+.modal-content h3 {
+    margin-top: 0;
+}
+.modal-content button {
+    background-color: #a3a3a3c2;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.modal-content button:hover {
+    background-color: #ffffff;
+}
+
+
+/* Carrusel */
+#galeria-horizontal {
+    position: relative;
+    margin-top: 20px;
+}
+
+.contenedor-galeria {
+    width: 97%;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.carrusel {
+    display: flex;
+}
+
+.carrusel-activo {
+    animation: girarCarrusel 25s linear infinite;
+}
+
+.carrusel img {
+    width: 100%; 
+    height: 100%;  
+    object-fit: contain; 
+    border-radius: 8px;
+    margin-left: 8px;
+}
+
+@keyframes girarCarrusel {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* Formulario de contacto */
+.contacto-bg {
+    position: relative;
+    background-image: url('../img/dlovan-666-ZQ2KT2J4uDI-unsplash.jpg'); 
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    padding: 50px 20px;
+    color: white;
+}
+
+.contacto-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    z-index: 5;
+}
+
+#contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    margin: 0;     
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#contacto {
+    width: 30%;
+    z-index: 10;
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    z-index: 10;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+form button {
+    background-color: #000000a8;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+form button:hover {
+    background-color: #ffffff9a;
+    z-index: 10;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
